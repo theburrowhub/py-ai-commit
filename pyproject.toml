@@ -1,0 +1,33 @@
+[project]
+name = "ai-commit"
+version = "0.1.0"
+description = "Make your commits smarter with AI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.7",
+    "gitpython>=3.1.43",
+    "ollama>=0.4.5",
+    "pick>=2.4.0",
+    "pydantic>=2.10.2",
+    "pyenchant>=3.2.2",
+    "pyperclip>=1.9.0",
+    "rich>=13.9.4",
+    "textual>=0.88.0",
+]
+
+[tool.uv]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+version_files = [
+    'src/theburrowhub/aicommit/__version__.py',
+]
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.11.1",
+]
